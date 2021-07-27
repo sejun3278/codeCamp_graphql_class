@@ -1,0 +1,64 @@
+typeorm 과 데이터 베이스와 연결하는
+createConnetion 기능을 사용
+
+Board 테이블을 관리하는 파일을 생성,
+typeorm 의 BaseEntity 을 이용해 테이블을 생성한다.
+
+typescript 로 변환하기 위해서 
+기본으로 ts 파일 확장자를 사용
+
+tsconfig.json 파일 생성 후
+기본 설정 추가
+
+package.json 에서 기본 node 가 아닌
+타입스크립트 기반의 node 로 변경해줌
+(yarn add -D ts-node)
+
+- 개발용도 설치한다.
+(yarn add -D ts-node-dev)
+
+실행하는 부분은
+= ts-node-dev index.ts 로 변경한다.
+
+
+서버에 대한 설정으로
+API 와 API 타입을 설정해준 후,
+
+데이터베이스와 연결이 성공했을 때
+포트 번호를 설정시켜 서버와 연결한다.
+
+접속 완료 메세지가 출력되면
+테이블과 API 가 실제로 생성된다.
+
+localhost:4000/graphql 로 이동하면
+내 서버에 생성된 API 들을 확인할 수 있다.
+(Schema 탭으로 이동)
+
+API 에서 리턴되는 부분은 
+프론트엔드로 전달된다.
+
+createBoard API 의 경우는
+Board 테이블의 insert 메소드로 생성할 수 있다.
+
+Query 의 fetchBoard 는 find 메소드로
+데이터를 가져올 수 있다.
+
+
+API 에서도 try, catch 를 사용할 수 있으며,
+에러 발생시에는 파일로 별도 저장한다.
+
+
+Mutation 의 인자로 들어가는 Input 은
+input 타입으로 생성해야 한다.
+
+
+
+
+// 파이어베이스
+
+FireStore Database : NoSQL
+Realtime Database : 실시간 데이터베이스 (etc. 채팅)
+Hosting : 배포
+
+
+yarn add firebase 로 설치
